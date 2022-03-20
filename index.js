@@ -8,9 +8,9 @@ const graph2 = {
   nodes: [
     { id: 'Myriel', group: 1 },
     { id: 'Napoleon', group: 1, value: 2 },
-    { id: 'Mlle.Baptistine', group: 1 },
-    { id: 'Mme.Magloire', group: 1 },
-    { id: 'CountessdeLo', group: 1 },
+    { id: 'Mlle.Baptistine', group: 1, value: 8 },
+    // { id: 'Mme.Magloire', group: 1, value: 10 },
+    // { id: 'CountessdeLo', group: 1 },
     // { id: 'Geborand', group: 1 },
     // { id: 'Champtercier', group: 1 },
     // { id: 'Cravatte', group: 1 },
@@ -21,7 +21,7 @@ const graph2 = {
     { source: 'Napoleon', target: 'Myriel', value: 1 },
     { source: 'Mlle.Baptistine', target: 'Myriel', value: 8 },
     { source: 'Mme.Magloire', target: 'Myriel', value: 10 },
-    { source: 'CountessdeLo', target: 'Myriel', value: 1 },
+    // { source: 'CountessdeLo', target: 'Myriel', value: 1 },
     // { source: 'Geborand', target: 'Myriel', value: 1 },
     // { source: 'Champtercier', target: 'Myriel', value: 1 },
     // { source: 'Cravatte', target: 'Myriel', value: 1 },
@@ -80,7 +80,7 @@ const createChart = () => {
     .data(graph.nodes)
     .enter()
     .append('circle')
-    .attr('r', 5)
+    .attr('r', (d) => (d.value || 1) + 5)
     .attr('fill', function (d) {
       return color(d.group);
     })
