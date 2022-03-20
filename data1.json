@@ -20,7 +20,6 @@
     { "source": "Champtercier", "target": "Myriel", "value": 1 },
     { "source": "Cravatte", "target": "Myriel", "value": 1 },
     { "source": "Count", "target": "Myriel", "value": 2 },
-    { "source": "OldMan", "target": "Myriel", "value": 1 },
-    { "source": "Valjean", "target": "Myriel", "value": 5 }
+    { "source": "OldMan", "target": "Myriel", "value": 1 }
   ]
 }
