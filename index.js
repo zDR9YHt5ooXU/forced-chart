@@ -1,9 +1,10 @@
 // Import stylesheets
 import './style.css';
 import * as d3 from 'd3';
-// import * as graph from './data.json';
-import * as graph from './data1.json';
+import * as graph1 from './data.json';
+import * as graph2 from './data1.json';
 
+const graph = graph1;
 const createChart = () => {
   const width = 960;
   const height = 600;
