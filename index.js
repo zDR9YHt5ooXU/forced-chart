@@ -2,9 +2,24 @@
 import './style.css';
 import * as d3 from 'd3';
 import * as graph1 from './data.json';
-import * as graph2 from './data1.json';
+// import * as graph2 from './data1.json';
+
+const graph2 = {
+  nodes: [
+    { id: 'Myriel', group: 1 },
+    { id: 'Napoleon', group: 1 },
+    { id: 'Mlle.Baptistine', group: 1 },
+    { id: 'Mme.Magloire', group: 1 },
+  ],
+  links: [
+    { source: 'Napoleon', target: 'Myriel', value: 1 },
+    { source: 'Mlle.Baptistine', target: 'Myriel', value: 8 },
+    { source: 'Mme.Magloire', target: 'Myriel', value: 10 },
+  ],
+};
 
 const graph = graph2;
+
 const createChart = () => {
   const width = 300;
   const height = 300;
