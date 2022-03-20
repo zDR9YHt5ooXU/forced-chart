@@ -80,7 +80,8 @@ const createChart = () => {
     .data(graph.nodes)
     .enter()
     .append('circle')
-    .attr('r', (d) => (d.value || 1) + 5)
+    // .attr('r', (d) => (d.value || 1) + 5)
+    .attr('r', (d) => 20)
     .attr('fill', function (d) {
       return color(d.group);
     })
