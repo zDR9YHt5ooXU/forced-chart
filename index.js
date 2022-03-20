@@ -10,23 +10,23 @@ const graph2 = {
     { id: 'Napoleon', group: 1, value: 2 },
     { id: 'Mlle.Baptistine', group: 1, value: 8 },
     { id: 'Mme.Magloire', group: 1, value: 10 },
-    // { id: 'CountessdeLo', group: 1 },
-    // { id: 'Geborand', group: 1 },
-    // { id: 'Champtercier', group: 1 },
-    // { id: 'Cravatte', group: 1 },
-    // { id: 'Count', group: 1 },
-    // { id: 'OldMan', group: 1 },
+    { id: 'CountessdeLo', group: 1 },
+    { id: 'Geborand', group: 1 },
+    { id: 'Champtercier', group: 1 },
+    { id: 'Cravatte', group: 1 },
+    { id: 'Count', group: 1 },
+    { id: 'OldMan', group: 1 },
   ],
   links: [
     { source: 'Napoleon', target: 'Myriel', value: 1 },
     { source: 'Mlle.Baptistine', target: 'Myriel', value: 8 },
     { source: 'Mme.Magloire', target: 'Myriel', value: 10 },
-    // { source: 'CountessdeLo', target: 'Myriel', value: 1 },
-    // { source: 'Geborand', target: 'Myriel', value: 1 },
-    // { source: 'Champtercier', target: 'Myriel', value: 1 },
-    // { source: 'Cravatte', target: 'Myriel', value: 1 },
-    // { source: 'Count', target: 'Myriel', value: 2 },
-    // { source: 'OldMan', target: 'Myriel', value: 1 },
+    { source: 'CountessdeLo', target: 'Myriel', value: 1 },
+    { source: 'Geborand', target: 'Myriel', value: 1 },
+    { source: 'Champtercier', target: 'Myriel', value: 1 },
+    { source: 'Cravatte', target: 'Myriel', value: 1 },
+    { source: 'Count', target: 'Myriel', value: 2 },
+    { source: 'OldMan', target: 'Myriel', value: 1 },
   ],
 };
 
@@ -45,14 +45,12 @@ const createChart = () => {
     .forceSimulation()
     .force(
       'link',
-      d3
-        .forceLink()
-        .id(function (d) {
-          return d.id;
-        })
-        .distance((d) => {
-          return 50 - (d.value || 1) * 2;
-        })
+      d3.forceLink().id(function (d) {
+        return d.id;
+      })
+      // .distance((d) => {
+      //   return 50 - (d.value || 1) * 2;
+      // })
     )
     .force(
       'charge',
@@ -81,7 +79,7 @@ const createChart = () => {
     .enter()
     .append('circle')
     // .attr('r', (d) => (d.value || 1) + 5)
-    .attr('r', (d) => 20)
+    .attr('r', (d) => 10)
     .attr('fill', function (d) {
       return color(d.group);
     })
