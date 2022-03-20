@@ -6,8 +6,8 @@ import * as graph2 from './data1.json';
 
 const graph = graph2;
 const createChart = () => {
-  const width = 960;
-  const height = 600;
+  const width = 300;
+  const height = 300;
   const svg = d3
     .create('svg')
     .attr('viewBox', [0, 0, width, height])
