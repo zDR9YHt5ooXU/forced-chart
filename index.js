@@ -9,7 +9,7 @@ const graph2 = {
     { id: 'Myriel', group: 1 },
     { id: 'Napoleon', group: 1, value: 2 },
     { id: 'Mlle.Baptistine', group: 1, value: 8 },
-    // { id: 'Mme.Magloire', group: 1, value: 10 },
+    { id: 'Mme.Magloire', group: 1, value: 10 },
     // { id: 'CountessdeLo', group: 1 },
     // { id: 'Geborand', group: 1 },
     // { id: 'Champtercier', group: 1 },
